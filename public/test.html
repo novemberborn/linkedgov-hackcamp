@@ -2,10 +2,69 @@
 <script>
 socket = new io.Socket();
 socket.connect();
-socket.on("connect", function(){
-  console.log("Connected");
-});
+socket.on("connect", start);
 socket.on("message", function(data){
-  console.log("Message", data);
+  switch(data.type){
+    case "register-user":
+      // Should register single-player here.
+      if(data.error){
+        alert("Name already taken. Bye.");
+      }else{
+        pickCompetitor();
+      }
+      break;
+    case "play":
+      if(data.error){
+        alert("Can't play\n" + data.error);
+      }
+      break;
+    case "playing":
+      if(!data.error){
+        playing(data.name);
+      }
+      break;
+    case "move":
+      console.log(data);
+      break;
+    case "fml":
+      if(data.bankrupt){
+        alert("You were bankrupted");
+      }else if(data.points){
+        alert("You lost, the other player had more money");
+      }
+      break;
+    case "ftw":
+      if(data.bankrupt){
+        alert("The other player was bankrupted");
+      }else if(data.points){
+        alert("You beat the other player by having more money");
+      }else if(data.tie){
+        alert("You tied.");
+      }else if(data.single){
+        alert("Finished single game");
+      }
+      break;
+  }
 });
+
+function start(){
+  document.getElementById("start").style.display = "block";
+  document.getElementById("start").name.focus();
+}
+
+function pickCompetitor(){
+  document.getElementById("start").style.display = "none";
+  document.getElementById("pickCompetitor").style.display = "block";
+  document.getElementById("pickCompetitor").name.focus();
+}
+
+function playing(name){
+  document.getElementById("playing").textContent = "Playing against " + name;
+  document.getElementById("pickCompetitor").style.display = "none";
+}
 </script>
+
+<form id="start" style="display:none" onsubmit="socket.send({ type: 'register-user', name: this.name.value });return false"><label>Your username? <input name="name"></label></form>
+<form id="pickCompetitor" style="display:none" onsubmit="socket.send({ type: 'play', name: this.name.value, single: !this.name.value });return false"><label>Your competitor? <input name="name"></label></form>
+
+<div id="playing"></div>
