@@ -10,7 +10,7 @@
   
   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js" type="text/javascript"></script>
   <script type="text/javascript" src="http://www.cornify.com/js/cornify.js"></script>
-  <script type="text/javascript">
+  <script type="text/javascript" src="js/enhancement.js">
   
   // ==== for happiness... uncomment me.  puss och kram!   
   
@@ -26,20 +26,15 @@
     <h1>Smuggle on!</h1>
   </header>
   
-  <ol id="game-setup" class="section">
-    <li>
-      <label for="player-name">Select name:</label>
-      <input type="text" name="player-name" id="player-name" />
-    </li>
-    <li>
-      <input type="submit" value="Invite players" />
-      
-    </li>
-    <li>
-      <p class="waiting">Waiting...</p>
-      <input type="submit" class="button" value="Go!" />
-    </li>
-  </ol>
+  
+  <form id="game-setup2" class="section">
+    <div class="details">
+      <label for="username">What's your name?</label>
+      <input type="text" name="username" id="username" />
+      <input type="submit"  class="button" value="Play" />
+    </div>
+  </form>
+  
   
   <aside id="player-details">
     <!-- <img src="images/player.gif" alt="" /> -->
@@ -48,24 +43,28 @@
   </aside>
   
   <content id="game-zone">
-    <div id="current-item">
-      <h2>Item name</h2>
-      <p>&pound; </p>
-    </div>
+    <header>
+      <div id="current-item">
+        <h2>Item name</h2>
+        <p>&pound; </p>
+      </div>
+  
+      <div id="count-down">
+        <p class="timer">{10}</p>
+      </div>
+    </header>
     
     <div id="country-list">
-      <h2>Who do you want to sen this to?</h2>
+      <h2>Who do you want to sell this to?</h2>
       <ul>
         {loopMe*6}        
-        <li class="country-list"></li>
+        <li class="country">
+          <input type="submit" value="country" class="button" />
+        </li>
         {/loopMe}
       </ul>
     </div>
 
-    <div id="count-down">
-      <input type="button" class="button" value="This is evil, I'll pass" />
-      <p>{countDown}</p>
-    </div>
 
   </content>  
 

@@ -79,9 +79,11 @@ body {
   padding: 40px;
   font-family: georgia;
   font-style: italic;
-  background: #333333; }
+  background: #333333;
+  width: 980px;
+  margin: 0 auto; }
 
-h1 {
+.default, h1, #count-down .timer {
   font-family: helvetica;
   font-style: normal; }
 
@@ -146,23 +148,31 @@ h1 {
     padding: 35px 10px 20px 40px;
     margin-left: -1px; }
 
-.section {
-  margin-bottom: 50px; }
-
-#game-setup2 {
+.section, #game-setup2, #player-details, #game-zone {
+  margin-bottom: 50px;
   background: #ebebeb;
   -moz-border-radius: 10px;
   -webkit-border-radius: 10px;
   -o-border-radius: 10px;
   border-radius: 10px;
+  padding: 30px 10px 38px 45px; }
+
+#game-setup2 {
   padding: 30px 10px 38px 45px;
   overflow: hidden; }
+  #game-setup2 .details {
+    float: right;
+    margin-right: 20px; }
   #game-setup2 label {
-    display: block; }
+    display: block;
+    margin-bottom: 10px; }
   #game-setup2 input {
     float: left; }
     #game-setup2 input[type=text] {
-      padding: 3px; }
+      padding: 3px;
+      width: 200px; }
+    #game-setup2 input[type=button] {
+      margin-left: 10px; }
 
 #player-details {
   float: left;
@@ -170,15 +180,38 @@ h1 {
 
 #game-zone {
   float: left;
+  width: 610px;
   position: relative;
-  margin: 50px 0 0 10px;
-  padding: 0 300px 0 0; }
+  margin: 0 0 0 10px; }
+  #game-zone header {
+    margin-bottom: 20px;
+    overflow: hidden; }
+
+#country-list {
+  clear: both; }
+
+.country {
+  width: 200px;
+  background: white;
+  height: 250px;
+  float: left;
+  position: relative; }
+  .country input {
+    position: absolute;
+    bottom: 10px;
+    text-align: center; }
+
+#current-item {
+  float: left;
+  margin-right: 50px; }
 
 #count-down {
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  width: 250px; }
+  width: 390px;
+  float: left; }
+  #count-down .timer {
+    font-size: 3.8em;
+    text-align: center;
+    font-weight: bold; }
 
 .johanna-does-not-like-2-players #game-setup {
   display: none; }

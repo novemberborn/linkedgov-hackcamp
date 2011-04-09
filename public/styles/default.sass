@@ -9,9 +9,16 @@ body
   background: #333
 
 
-h1
+  width: 980px
+  margin: 0 auto
+
+
+.default
   font-family: helvetica
   font-style: normal  
+
+h1
+  @extend .default
   
 h2
   font-size: 1.8em
@@ -74,41 +81,74 @@ h1
 
 .section
   margin-bottom: 50px
-  
+  background: #EBEBEB
+  +rounded-corners(10px)
+  padding: 30px 10px 38px 45px
+    
 #game-setup
   @extend .horizontal-list
 
 #game-setup2
-  background: #EBEBEB
-  +rounded-corners(10px)
+  //margin-left: 10%
+  //margin-right: 10%
+  @extend .section
   padding: 30px 10px 38px 45px
   overflow: hidden
+  .details
+    float: right
+    margin-right: 20px
   label
     display: block
+    margin-bottom: 10px
   input
     float: left
     &[type=text]
-      padding: 3px 
+      padding: 3px
+      width: 200px 
     &[type=button]
+      margin-left: 10px
+    
     
 
 #player-details
   float: left
   width: 250px
-
+  @extend .section
 #game-zone
   float: left
+  @extend .section
+  width: 610px
   position: relative
-  margin: 50px 0 0 10px
-  padding: 0 300px 0 0
-
-#count-down
-  position: absolute
-  right: 0
-  bottom: 0
-  width: 250px
+  margin: 0 0 0 10px
+  header
+    margin-bottom: 20px
+    overflow: hidden
+#country-list
+  clear: both
   
+.country
+  width: 200px
+  background: #fff
+  height: 250px
+  float: left
+  position: relative
+  input
+    position: absolute
+    bottom: 10px
+    text-align: center
 
+#current-item
+  float: left
+  margin-right: 50px
+  
+#count-down
+  width: 390px
+  float: left
+  .timer
+    font-size: 3.8em
+    text-align: center
+    @extend .default
+    font-weight: bold
 
 .johanna-does-not-like-2-players
   #game-setup
