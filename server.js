@@ -33,12 +33,15 @@ function onClientMessage(client, data){
     case "play":
       if(!(data.name in registeredUsers)){
         client.send({ type: data.type, error: "unknown-competitor" });
+      }else if(registeredUsers[data.name].playing){
+        client.send({ type: data.type, error: "competitor-playing" });
       }else{
         var us = registeredUsers[client.sessionId], them = registeredUsers[data.name];
         us.playing = them;
         them.playing = us;
         client.send({ type: "playing", name: them.name });
         registeredUsers[data.name].client.send({ type: "playing", name: us.name });
+        console.log("%s playing %s", us.name, them.name);
       }
       break;
   }
