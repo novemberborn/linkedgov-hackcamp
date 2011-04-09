@@ -1,0 +1,119 @@
+@import components/reset
+@import components/mixins
+@import components/helpers
+
+body
+  padding: 40px
+  font-family: georgia
+  font-style: italic
+  background: #333
+
+
+h1
+  font-family: helvetica
+  font-style: normal  
+  
+h2
+  font-size: 1.8em
+
+p,label, input
+  font-size: 1.5em
+
+.button
+  +rounded-corners(10px)
+  border: 1px solid #333
+  display: inline-block
+  padding: 5px 10px 6px
+  color: #fff
+  text-decoration: none
+  font-weight: bold
+  line-height: 1
+  -moz-border-radius: 5px
+  -webkit-border-radius: 5px
+  -moz-box-shadow: 0 1px 3px #999
+  -webkit-box-shadow: 0 1px 3px #999
+  text-shadow: 0 -1px 1px #222
+  border-bottom: 1px solid #222
+  position: relative
+  cursor: pointer
+  background: #ff0000 url(http://www.zurb.com/images/alert-overlay.png) repeat-x
+  -moz-box-shadow: 0 1px 3px rgba(0,0,0,0.5)
+  -webkit-box-shadow: 0 1px 3px rgba(0,0,0,0.5)
+  text-shadow: 0 -1px 1px rgba(0,0,0,0.25)
+  border-bottom: 1px solid rgba(0,0,0,0.25)
+  &:hover
+    background-color: #323232 
+  &:active
+    background-color: red
+    padding-top: 4px
+    top: 2px
+    font-size: 1.4em   
+
+#banner
+  margin-bottom: 30px
+  font-size: 2.0em
+  text-align: center
+  color: #fff
+  line-height: 125%
+  span
+    display: block
+h1
+  display: inline
+
+.horizontal-list
+  width: 980px
+  //border: #ff0000 2px solid 
+  //@extend .clearfix
+  overflow: hidden  
+  li
+    float: left
+    border-left: 1px solid #333
+    width: 250px
+    padding: 35px 10px 20px 40px
+    margin-left: -1px
+
+.section
+  margin-bottom: 50px
+  
+#game-setup
+  @extend .horizontal-list
+
+#game-setup2
+  background: #EBEBEB
+  +rounded-corners(10px)
+  padding: 30px 10px 38px 45px
+  overflow: hidden
+  label
+    display: block
+  input
+    float: left
+    &[type=text]
+      padding: 3px 
+    &[type=button]
+    
+
+#player-details
+  float: left
+  width: 250px
+
+#game-zone
+  float: left
+  position: relative
+  margin: 50px 0 0 10px
+  padding: 0 300px 0 0
+
+#count-down
+  position: absolute
+  right: 0
+  bottom: 0
+  width: 250px
+  
+
+
+.johanna-does-not-like-2-players
+  #game-setup
+    display: none    
+    li:nth-child(2n)
+      display: none
+  
+  

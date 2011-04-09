@@ -1,1 +1,186 @@
-@import reset
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent; }
+
+html {
+  overflow-y: scroll; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after {
+  content: "";
+  content: none; }
+
+q:before, q:after {
+  content: "";
+  content: none; }
+
+ins {
+  text-decoration: none; }
+
+del {
+  text-decoration: line-through; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+a:link, a:visited {
+  color: #222221; }
+a:hover {
+  color: #444444; }
+
+.clearfix:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden; }
+
+.clearfix {
+  display: inline-block; }
+
+.clearfix {
+  display: block; }
+
+.visually-hidden {
+  position: absolute !important;
+  clip: rect(1px 1px 1px 1px);
+  clip: rect(1px, 1px, 1px, 1px); }
+
+.float-r {
+  float: right; }
+
+.float-l {
+  float: left; }
+
+.invisible {
+  visibility: hidden; }
+
+.hide, .hidden {
+  display: none !important; }
+
+.FIXME {
+  border-bottom: dotted red 2px !important; }
+
+body {
+  padding: 40px;
+  font-family: georgia;
+  font-style: italic;
+  background: #333333; }
+
+h1 {
+  font-family: helvetica;
+  font-style: normal; }
+
+h2 {
+  font-size: 1.8em; }
+
+p, label, input {
+  font-size: 1.5em; }
+
+.button {
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -o-border-radius: 10px;
+  border-radius: 10px;
+  border: 1px solid #333333;
+  display: inline-block;
+  padding: 5px 10px 6px;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  line-height: 1;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-box-shadow: 0 1px 3px #999999;
+  -webkit-box-shadow: 0 1px 3px #999999;
+  text-shadow: 0 -1px 1px #222222;
+  border-bottom: 1px solid #222222;
+  position: relative;
+  cursor: pointer;
+  background: red url(http://www.zurb.com/images/alert-overlay.png) repeat-x;
+  -moz-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+  -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+  text-shadow: 0 -1px 1px rgba(0, 0, 0, 0.25);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.25); }
+  .button:hover {
+    background-color: #323232; }
+  .button:active {
+    background-color: red;
+    padding-top: 4px;
+    top: 2px;
+    font-size: 1.4em; }
+
+#banner {
+  margin-bottom: 30px;
+  font-size: 2em;
+  text-align: center;
+  color: white;
+  line-height: 125%; }
+  #banner span {
+    display: block; }
+
+h1 {
+  display: inline; }
+
+.horizontal-list, #game-setup {
+  width: 980px;
+  overflow: hidden; }
+  .horizontal-list li, #game-setup li {
+    float: left;
+    border-left: 1px solid #333333;
+    width: 250px;
+    padding: 35px 10px 20px 40px;
+    margin-left: -1px; }
+
+.section {
+  margin-bottom: 50px; }
+
+#game-setup2 {
+  background: #ebebeb;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -o-border-radius: 10px;
+  border-radius: 10px;
+  padding: 30px 10px 38px 45px;
+  overflow: hidden; }
+  #game-setup2 label {
+    display: block; }
+  #game-setup2 input {
+    float: left; }
+    #game-setup2 input[type=text] {
+      padding: 3px; }
+
+#player-details {
+  float: left;
+  width: 250px; }
+
+#game-zone {
+  float: left;
+  position: relative;
+  margin: 50px 0 0 10px;
+  padding: 0 300px 0 0; }
+
+#count-down {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 250px; }
+
+.johanna-does-not-like-2-players #game-setup {
+  display: none; }
+  .johanna-does-not-like-2-players #game-setup li:nth-child(2n) {
+    display: none; }
