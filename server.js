@@ -1,7 +1,10 @@
 var http = require("http"),
     io = require("socket.io"),
     paperboy = require("paperboy"),
-    path = require("path");
+    path = require("path"),
+    GameManager = require("./lib/game-manager").GameManager;
+
+var manager = new GameManager(JSON.parse(require("fs").readFileSync("game.json", "utf8")));
 
 server = http.createServer(function(req, res){
   paperboy.deliver(path.join(__dirname, "public"), req, res);
@@ -31,17 +34,34 @@ function onClientMessage(client, data){
       }
       break;
     case "play":
-      if(!(data.name in registeredUsers)){
+      if(!data.single && !(data.name in registeredUsers)){
         client.send({ type: data.type, error: "unknown-competitor" });
-      }else if(registeredUsers[data.name].playing){
+      }else if(!data.single && registeredUsers[data.name].game){
         client.send({ type: data.type, error: "competitor-playing" });
       }else{
-        var us = registeredUsers[client.sessionId], them = registeredUsers[data.name];
-        us.playing = them;
-        them.playing = us;
-        client.send({ type: "playing", name: them.name });
-        registeredUsers[data.name].client.send({ type: "playing", name: us.name });
-        console.log("%s playing %s", us.name, them.name);
+        var us, them;
+        us = registeredUsers[client.sessionId];
+        if(!data.single){
+          them = registeredUsers[data.name];
+        }
+        us.game = manager.createGame(us, them);
+        if(data.single){
+          client.send({ type: "playing", single: true });
+        }else{
+          them.game = us.game;
+          client.send({ type: "playing", name: them.name });
+          registeredUsers[data.name].client.send({ type: "playing", name: us.name });
+        }
+        console.log("%s playing %s", us.name, data.single ? "[single]" : them.name);
+        us.game.move();
+      }
+      break;
+    case "move":
+      var game = registeredUsers[client.sessionId].game;
+      if(!game){
+        client.send({ type: data.type, error: "no-game" });
+      }else{
+        game.handleMove(registeredUsers[client.sessionId], data.country);
       }
       break;
   }

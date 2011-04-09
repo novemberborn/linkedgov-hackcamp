@@ -6,6 +6,7 @@ socket.on("connect", start);
 socket.on("message", function(data){
   switch(data.type){
     case "register-user":
+      // Should register single-player here.
       if(data.error){
         alert("Name already taken. Bye.");
       }else{
@@ -20,6 +21,27 @@ socket.on("message", function(data){
     case "playing":
       if(!data.error){
         playing(data.name);
+      }
+      break;
+    case "move":
+      console.log(data);
+      break;
+    case "fml":
+      if(data.bankrupt){
+        alert("You were bankrupted");
+      }else if(data.points){
+        alert("You lost, the other player had more money");
+      }
+      break;
+    case "ftw":
+      if(data.bankrupt){
+        alert("The other player was bankrupted");
+      }else if(data.points){
+        alert("You beat the other player by having more money");
+      }else if(data.tie){
+        alert("You tied.");
+      }else if(data.single){
+        alert("Finished single game");
       }
       break;
   }
@@ -43,6 +65,6 @@ function playing(name){
 </script>
 
 <form id="start" style="display:none" onsubmit="socket.send({ type: 'register-user', name: this.name.value });return false"><label>Your username? <input name="name"></label></form>
-<form id="pickCompetitor" style="display:none" onsubmit="socket.send({ type: 'play', name: this.name.value });return false"><label>Your competitor? <input name="name"></label></form>
+<form id="pickCompetitor" style="display:none" onsubmit="socket.send({ type: 'play', name: this.name.value, single: !this.name.value });return false"><label>Your competitor? <input name="name"></label></form>
 
 <div id="playing"></div>

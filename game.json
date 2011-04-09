@@ -1,0 +1,25 @@
+{
+  "rounds": 2,
+  "initialPoints": 5000,
+  "commodities": [
+    {
+      "title": "Car",
+      "price": 1000
+    },
+    {
+      "title": "Grenade",
+      "price": 1500
+    }
+  ],
+  
+  "countries": {
+    "Libya": {
+      "risk": 0.8,
+      "multiplier": 4
+    },
+    "Iran": {
+      "risk": 0.6,
+      "multiplier": 3
+    }
+  }
+}
