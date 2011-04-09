@@ -1,0 +1,110 @@
+@import reset
+@import colours
+@import mixins
+@import typography
+@import helpers
+// === default elements - coming soon!
+
+// === Paths Config
+$zone-images: unquote("../../images/consumer-facing-zone")
+$padding-groupSections = 13px
+$padding-groupSections-doubled = $padding-groupSections * 2
+//$maxWidth: 940px
+$maxWidth = 960px
+$sectionPadding = 18px
+
+
+// === end general classes (eg - .list,.right-col,.left-col, etc) - coming soon!
+
+body
+  color: $copy-color
+  margin: 12px 0
+  background: #ccdded
+
+// the header bit... 
+.site-header
+  @extend .group-container
+  @extend .clearfix
+  #area-details
+    float: left
+  #justgiving-logo
+    @extend .visually-hidden
+  
+  #nav-top
+    float: right
+    
+
+
+// main content area
+
+
+.group-container
+  @extend .clearfix
+  width: $maxWidth
+  display: block
+  margin: 0 auto
+
+.group-section
+  background: #fff
+  border: 1px solid #ecf0f4
+  padding: $padding-groupSections
+  float: left
+  margin-bottom: 13px
+  +rounded-corners(5px)
+  h2
+    font-size: $large-font
+
+.banner
+  float: none
+  width: $maxWidth - $padding-groupSections-doubled
+  margin: 0 auto 13px
+  @extend .group-section
+  @extend .clearfix
+  .section
+    width: 280px
+    float: left
+
+.section
+  padding: $sectionPadding 0 $sectionPadding
+
+.left-col
+  @extend .group-section
+  width: 750px - $padding-groupSections-doubled
+  margin-right: 18px
+  header
+    border-bottom: $border-settings
+    padding: 0 0 $sectionPadding  
+  h1 span
+    font-size: $larger-font
+    display: block
+    margin: 16px 0
+  
+.right-col
+  @extend .group-section
+  width: 186px - $padding-groupSections-doubled
+  
+.one-third-col
+  @extend .group-section
+  //width: 324px - $padding-groupSections-doubled
+  width: 308px - $padding-groupSections-doubled
+  margin-right: 15px
+  
+.one-third-col.last
+  margin-right: 0  
+
+.list-default
+  list-style: disc
+  padding-left: 15px
+
+.list-links 
+  a
+    display: block
+    text-decoration: none
+    border-bottom: $border-settings
+    padding: 3px 0 4px 8px
+    &:hover
+      background: $highlights
+
+// === end general classes (eg - .list,.right-col,.left-col, etc)
+
+// === Individual pages and elements (eg. #photo-media)

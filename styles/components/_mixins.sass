@@ -1,0 +1,90 @@
+=margin-center
+  margin-left: auto
+  margin-right: auto
+
+=replace-text($url, $width, $height)
+  background-image: url($url)
+  width: $width
+  height: $height
+  background-repeat: no-repeat
+  text-indent: -9999px
+  display: block
+  
+=padded-height($height, $padding-top = 0px, $padding-bottom = 0px)
+  height: $height - $padding-top - $padding-bottom
+  padding-top: $padding-top
+  padding-bottom: $padding-bottom
+
+=padded-width($width, $padding-left = 0px, $padding-right = 0px)
+  width: $width - $padding-left - $padding-right
+  padding-left: $padding-left
+  padding-right: $padding-right
+  
+=max-height($height)
+  max-height: #{$height}px
+  *height: expression(this.height > #{$height} ? "#{$height}px" : true)
+  
+=min-height($height)
+  min-height: #{$height}px
+  *height: expression(this.height < #{$height} ? "#{$height}px" : true)
+  
+=max-width($width)
+  max-width: #{$width}px
+  *width: expression(this.width > #{$width} ? "#{$width}px" : true)
+  
+=min-width($width)
+  min-width: #{$width}px
+  *width: expression(this.width < #{$width} ? "#{$width}px" : true)
+  
+=spans-columns($count)
+  width: $count * $column-width + (($count + 1) * $gutter-width)
+
+=strip-link-decoration
+  text-decoration: none
+  font-style: normal
+  &:hover, &:active, &:visited
+    text-decoration: none
+    font-style: normal
+    
+=font-size($size)
+  font-size: #{$size}-font
+  line-height: #{$size}-line-height
+  
+=box-shadow($x: 1px, $y: 1px, $radius: 3px, $color: gray)
+  -webkit-box-shadow: $x $y $radius $color
+  -moz-box-shadow: $x $y $radius $color
+  box-shadow: $x $y $radius $color
+
+=rounded-corners($radius) // usage: @include rounded-corners(5px) 
+  -moz-border-radius: $radius
+  -webkit-border-radius: $radius
+  -o-border-radius: $radius
+  border-radius: $radius
+  
+=manual-rounded-corners($topleft: 5px, $topright: 5px, $bottomleft: 5px, $bottomright: 5px)
+  -moz-border-radius-topleft: $topleft
+  -webkit-border-top-left-radius: $topleft
+  border-top-left-radius: $topleft
+  -moz-border-radius-topright: $topright
+  -webkit-border-top-right-radius: $topright
+  border-top-right-radius: $topright
+  -moz-border-radius-bottomleft: $bottomleft
+  -webkit-border-bottom-left-radius: $bottomleft
+  border-bottom-left-radius: $bottomleft
+  -moz-border-radius-bottomright: $bottomright
+  -webkit-border-bottom-right-radius: $bottomright
+  border-bottom-right-radius: $bottomright
+  
+=pixel-shadow($color: gray)
+  text-shadow: 0px 1px 0px $color
+
+=transparency ($value: 80) 
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=$value)"
+  filter: alpha(opacity=$value)
+  -moz-opacity: #{"0." + $value}
+  -khtml-opacity: #{"0." + $value}
+  opacity: #{"0." + $value}
+
+=make-unselectable
+  -moz-user-select: none
+  -khtml-user-select: none
