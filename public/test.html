@@ -1,0 +1,11 @@
+<script src="js/socket.io.min.js"></script>
+<script>
+socket = new io.Socket();
+socket.connect();
+socket.on("connect", function(){
+  console.log("Connected");
+});
+socket.on("message", function(data){
+  console.log("Message", data);
+});
+</script>
