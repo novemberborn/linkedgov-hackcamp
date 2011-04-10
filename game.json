@@ -1,25 +1,50 @@
 {
-  "rounds": 2,
+  "rounds": 1,
   "initialPoints": 5000,
   "commodities": [
     {
-      "title": "Car",
-      "points": 1000
-    },
-    {
-      "title": "Grenade",
-      "points": 1500
+      "title": "Overcoat",
+      "points": 500,
+      "countries": {
+        "Libya": {
+          "risk": 0.8,
+          "multiplier": 6
+        },
+        "Iran": {
+          "risk": 0.4,
+          "multiplier": 5
+        },
+        "North Korea": {
+          "risk": 0.6,
+          "multiplier": 10
+        },
+        "Sudan": {
+          "risk": 0.4,
+          "multiplier": 2
+        },
+        "Guinea": {
+          "risk": 0.1,
+          "multiplier": 2
+        },
+        "Ivory Coast": {
+          "risk": 0.4,
+          "multiplier": 3
+        },
+        "Zimbabwe": {
+          "risk": 0.6,
+          "multiplier": 2
+        },
+        "Myanmar": {
+          "risk": 0.2,
+          "multiplier": 2
+        },
+        "Egypt": {
+          "risk": 0.2,
+          "multiplier": 2
+        }
+      }
     }
   ],
   
-  "countries": {
-    "Libya": {
-      "risk": 0.8,
-      "multiplier": 4
-    },
-    "Iran": {
-      "risk": 0.6,
-      "multiplier": 3
-    }
-  }
+  "countries": ["Libya", "Iran", "North Korea", "Sudan", "Guinea", "Ivory Coast", "Zimbabwe", "Myanmar", "Egypt", "Austria", "Netherlands", "Romania", "Australia", "Chile", "Andorra"]
 }
