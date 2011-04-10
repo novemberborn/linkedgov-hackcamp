@@ -127,10 +127,14 @@ Commands["fml"] = {
     updateCash(data.points);
     $("#count-down .timer").hide();
     if(data.bankrupt){
-      alert("You were bankrupted");
+      $("#bankrupt").show();
     }else if(data.byPoints){
       alert("You lost, the other player had more money");
     }
+    $("#player-details").fadeOut("slow");
+    $("#game-zone").fadeOut("slow", function(){
+      $("#end-screen").fadeIn();
+    });
   }
 };
 
@@ -145,7 +149,11 @@ Commands["ftw"] = {
     }else if(data.tie){
       alert("You tied.");
     }else if(data.single){
-      alert("Finished single game");
+      $("#congrats").show();
     }
+    $("#player-details").fadeOut("slow");
+    $("#game-zone").fadeOut("slow", function(){
+      $("#end-screen").fadeIn();
+    });
   }
 };
