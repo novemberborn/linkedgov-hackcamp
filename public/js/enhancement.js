@@ -17,6 +17,7 @@ socket.on("message", function(data){
 });
 
 $(function() {
+  resetGame();
   $("#game-setup2").submit(handleRegistrationSubmit);
   $("#country-list li").click(sendMove);
   ready();
@@ -26,10 +27,36 @@ function ready(){
   $(document.body).removeClass("loading");
 }
 
+
+function ScrollToGame(location){
+  $('html, body').animate({
+    scrollTop: ($(location).offset().top) - 30 // 40 = padding/marging... hardcoding this in for time being 
+  }, 500);
+  console.log("" + ($(location).offset().top) - 400);
+  return false;
+}
+
+function resetGame(){
+  $("#player-details,#game-zone,#country-list ul").hide();
+}
+
+function loadGame(){  
+  $("#player-details,#game-zone").fadeIn("slow",function(){
+      $("#country-list ul").delay(800).fadeIn("slow");  
+  });
+
+}
+
+
 function handleRegistrationSubmit(){
   if(this.username.value){
     register(this.username.value);
-    $("#game-setup2").fadeOut("slow");
+    $("#game-setup2").fadeOut("slow", function(){ // wait for fade to happen.. 
+      ScrollToGame("#game-zone");
+      loadGame();
+    });
+    
+
   }
   return false;
 }

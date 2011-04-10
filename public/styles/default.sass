@@ -22,6 +22,7 @@ h1
   
 h2
   font-size: 1.8em
+  margin-bottom: 10px
 
 p,label, input
   font-size: 1.5em
@@ -52,9 +53,6 @@ p,label, input
     background-color: #323232 
   &:active
     background-color: red
-    padding-top: 4px
-    top: 2px
-    font-size: 1.4em   
 
 #banner
   margin-bottom: 30px
@@ -83,7 +81,7 @@ h1
   margin-bottom: 50px
   background: #EBEBEB
   +rounded-corners(10px)
-  padding: 30px 10px 38px 45px
+  padding: 30px 10px 38px 35px
     
 #game-setup
   @extend .horizontal-list
@@ -112,29 +110,33 @@ h1
 
 #player-details
   float: left
-  width: 250px
+  width: 240px
   @extend .section
 #game-zone
   float: left
   @extend .section
-  width: 610px
+  width: 625px
   position: relative
-  margin: 0 0 0 10px
+  margin: 0 0 0 25px
   header
     margin-bottom: 20px
     overflow: hidden
 #country-list
-  clear: both
+  ul
+    clear: both
+    margin-left: -20px
   
 .country
   width: 200px
   background: #fff
   height: 250px
+  margin: 0 0 10px 10px 
   float: left
   position: relative
   input
     position: absolute
     bottom: 10px
+    left: 40px
     text-align: center
 
 #current-item
@@ -155,5 +157,9 @@ h1
     display: none    
     li:nth-child(2n)
       display: none
+  #country-list button:active
+    top: auto
+    
+    font-size: 1.4em
   
   
