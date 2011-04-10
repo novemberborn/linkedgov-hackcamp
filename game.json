@@ -1,5 +1,5 @@
 {
-  "rounds": 1,
+  "rounds": 6,
   "initialPoints": 5000,
   "commodities": [
     {
@@ -43,7 +43,289 @@
           "multiplier": 2
         }
       }
-    }
+    },
+    {
+      "title": "Purebred Horses",
+      "points": 1200,
+      "countries": {
+        "Libya": {
+          "risk": 0.8,
+          "multiplier": 6
+        },
+        "Iran": {
+          "risk": 0.3,
+          "multiplier": 5
+        },
+        "North Korea": {
+          "risk": 0.9,
+          "multiplier": 10
+        },
+        "Sudan": {
+          "risk": 0.3,
+          "multiplier": 2
+        },
+        "Guinea": {
+          "risk": 0.2,
+          "multiplier": 2
+        },
+        "Ivory Coast": {
+          "risk": 0.4,
+          "multiplier": 3
+        },
+        "Zimbabwe": {
+          "risk": 0.6,
+          "multiplier": 2
+        },
+        "Myanmar": {
+          "risk": 0.2,
+          "multiplier": 2
+        },
+        "Egypt": {
+          "risk": 0.2,
+          "multiplier": 2
+        }
+      }
+    },
+    {
+      "title": "Steel Bars",
+      "points": 900,
+      "countries": {
+        "Libya": {
+          "risk": 0.7,
+          "multiplier": 6
+        },
+        "Iran": {
+          "risk": 0.5,
+          "multiplier": 5
+        },
+        "North Korea": {
+          "risk": 0.8,
+          "multiplier": 10
+        },
+        "Sudan": {
+          "risk": 0.2,
+          "multiplier": 2
+        },
+        "Guinea": {
+          "risk": 0.1,
+          "multiplier": 2
+        },
+        "Ivory Coast": {
+          "risk": 0.4,
+          "multiplier": 3
+        },
+        "Zimbabwe": {
+          "risk": 0.6,
+          "multiplier": 2
+        },
+        "Myanmar": {
+          "risk": 0.2,
+          "multiplier": 2
+        },
+        "Egypt": {
+          "risk": 0.2,
+          "multiplier": 2
+        }
+      }
+    },
+    {
+      "title": "Woven fabrics",
+      "points": 550,
+      "countries": {
+        "Libya": {
+          "risk": 0.8,
+          "multiplier": 6
+        },
+        "Iran": {
+          "risk": 0.3,
+          "multiplier": 5
+        },
+        "North Korea": {
+          "risk": 0.9,
+          "multiplier": 10
+        },
+        "Sudan": {
+          "risk": 0.3,
+          "multiplier": 2
+        },
+        "Guinea": {
+          "risk": 0.2,
+          "multiplier": 2
+        },
+        "Ivory Coast": {
+          "risk": 0.4,
+          "multiplier": 3
+        },
+        "Zimbabwe": {
+          "risk": 0.6,
+          "multiplier": 2
+        },
+        "Myanmar": {
+          "risk": 0.2,
+          "multiplier": 2
+        },
+        "Egypt": {
+          "risk": 0.2,
+          "multiplier": 2
+        }
+      }
+    },
+    {
+      "title": "Electric generating sets",
+      "points": 350,
+      "countries": {
+        "Libya": {
+          "risk": 0.4,
+          "multiplier": 6
+        },
+        "Iran": {
+          "risk": 0.3,
+          "multiplier": 5
+        },
+        "North Korea": {
+          "risk": 0.9,
+          "multiplier": 10
+        },
+        "Sudan": {
+          "risk": 0.3,
+          "multiplier": 2
+        },
+        "Guinea": {
+          "risk": 0.2,
+          "multiplier": 2
+        },
+        "Ivory Coast": {
+          "risk": 0.4,
+          "multiplier": 3
+        },
+        "Zimbabwe": {
+          "risk": 0.6,
+          "multiplier": 2
+        },
+        "Myanmar": {
+          "risk": 0.2,
+          "multiplier": 2
+        },
+        "Egypt": {
+          "risk": 0.2,
+          "multiplier": 2
+        }
+      }
+    },
+    {
+      "title": "Diamonds",
+      "points": 1350,
+      "countries": {
+        "Libya": {
+          "risk": 0.6,
+          "multiplier": 6
+        },
+        "Iran": {
+          "risk": 0.4,
+          "multiplier": 5
+        },
+        "North Korea": {
+          "risk": 0.9,
+          "multiplier": 10
+        },
+        "Sudan": {
+          "risk": 0.3,
+          "multiplier": 2
+        },
+        "Guinea": {
+          "risk": 0.2,
+          "multiplier": 2
+        },
+        "Ivory Coast": {
+          "risk": 0.4,
+          "multiplier": 3
+        },
+        "Zimbabwe": {
+          "risk": 0.5,
+          "multiplier": 4
+        },
+        "Myanmar": {
+          "risk": 0.2,
+          "multiplier": 2
+        },
+        "Egypt": {
+          "risk": 0.2,
+          "multiplier": 2
+        }
+      }
+    },
+    {
+      "title": "Woven fabrics",
+      "points": 560,
+      "countries": {
+        "Libya": {
+          "risk": 0.8,
+          "multiplier": 6
+        },
+        "Iran": {
+          "risk": 0.3,
+          "multiplier": 5
+        },
+        "North Korea": {
+          "risk": 0.9,
+          "multiplier": 10
+        },
+        "Sudan": {
+          "risk": 0.3,
+          "multiplier": 2
+        },
+        "Guinea": {
+          "risk": 0.2,
+          "multiplier": 2
+        },
+        "Ivory Coast": {
+          "risk": 0.4,
+          "multiplier": 3
+        },
+        "Zimbabwe": {
+          "risk": 0.6,
+          "multiplier": 2
+        },
+        "Myanmar": {
+          "risk": 0.2,
+          "multiplier": 2
+        },
+        "Egypt": {
+          "risk": 0.2,
+          "multiplier": 2
+        }
+      }
+    },
+    {
+      "title": "Dairy",
+      "points": 400,
+      "countries": {
+      }
+    },
+     {
+      "title": "Green Tea",
+      "points": 660,
+      "countries": {
+      }
+    },
+     {
+      "title": "Cotton yarn",
+      "points": 380,
+      "countries": {
+      }
+    },
+     {
+      "title": "Manila hemp",
+      "points": 1200,
+      "countries": {
+      }
+    },
+     {
+      "title": "Brewery machinery",
+      "points": 2100,
+      "countries": {
+      }
+     }
   ],
   
   "countries": ["Libya", "Iran", "North Korea", "Sudan", "Guinea", "Ivory Coast", "Zimbabwe", "Myanmar", "Egypt", "Austria", "Netherlands", "Romania", "Australia", "Chile", "Andorra"]

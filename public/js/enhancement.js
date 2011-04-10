@@ -60,11 +60,10 @@ function handleRegistrationSubmit(){
   if(this.username.value){
     register(this.username.value);
     $("#game-setup2").fadeOut("slow", function(){ // wait for fade to happen.. 
+      $("#banner").text("").css("margin", "0");
       ScrollToGame("#game-zone");
       loadGame();
     });
-    
-
   }
   return false;
 }
@@ -126,6 +125,7 @@ Commands["move"] = {
 Commands["fml"] = {
   exec: function(data){
     updateCash(data.points);
+    $("#count-down .timer").hide();
     if(data.bankrupt){
       alert("You were bankrupted");
     }else if(data.byPoints){
@@ -137,6 +137,7 @@ Commands["fml"] = {
 Commands["ftw"] = {
   exec: function(data){
     updateCash(data.points);
+    $("#count-down .timer").hide();
     if(data.bankrupt){
       alert("The other player was bankrupted");
     }else if(data.byPoints){
