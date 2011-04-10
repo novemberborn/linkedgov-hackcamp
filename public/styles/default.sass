@@ -100,9 +100,13 @@ p,label, input
     background-color: red
 
 #banner
+  overflow: hidden
+  text-indent: -9999em
+  background: transparent url() no-repeat center center
+  
   margin-bottom: 30px
   font-size: 2.0em
-  text-align: center
+  text-align: left
   color: #fff
   line-height: 125%
   span
@@ -271,6 +275,12 @@ h1
     margin-bottom: 50px
   #info-graph
     clear: both
+    p
+      @extend .default
+      font-size: 1em
+      width: 520px
+      line-height: 130%
+    
     img
       border: 1px solid #ddd
       margin: 30px auto 0
