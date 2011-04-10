@@ -205,6 +205,8 @@ h1 {
     position: relative; }
 
 #game-setup2 {
+  margin: 0 auto;
+  width: 370px;
   padding: 30px 10px 38px 45px;
   overflow: hidden; }
   #game-setup2 .details {
@@ -214,7 +216,8 @@ h1 {
     display: block;
     margin-bottom: 10px; }
   #game-setup2 input {
-    float: left; }
+    float: left;
+    margin-left: 15px; }
     #game-setup2 input[type=text] {
       padding: 3px;
       width: 200px; }
@@ -324,7 +327,7 @@ h1 {
   width: 940px; }
   #end-screen #play-again {
     margin: 20px 0 0 120px; }
-  #end-screen #congrats, #end-screen #play-again {
+  #end-screen #congrats, #end-screen #bankrupt, #end-screen #play-again {
     float: left; }
   #end-screen div {
     margin-bottom: 50px; }
