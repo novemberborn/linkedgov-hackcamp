@@ -77,7 +77,6 @@ function updateCash(points){
 }
 
 function countdown(){
-  
   clearInterval(countdown.interval);
   var timer = $("#count-down .timer");
   var remaining = 10;
@@ -108,9 +107,9 @@ Commands["move"] = {
     setTimeout(countdown, 4000);
     $("#current-item h2").text(data.commodity.title);
     $("#current-item p").text("£ " + data.commodity.points);
-    $("#country-list li").each(function(ix, li){
+    $("#country-list li").each(function(ix){
       if(ix < data.countries.length){
-        $("input", li).val(data.countries[ix]);
+        $("input", this).val(this.dataset.country = data.countries[ix]);
       }
     });
   }
