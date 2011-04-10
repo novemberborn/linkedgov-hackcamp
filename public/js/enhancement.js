@@ -125,6 +125,7 @@ Commands["move"] = {
 Commands["fml"] = {
   exec: function(data){
     updateCash(data.points);
+    $("#count-down .timer").hide();
     if(data.bankrupt){
       alert("You were bankrupted");
     }else if(data.byPoints){
@@ -136,6 +137,7 @@ Commands["fml"] = {
 Commands["ftw"] = {
   exec: function(data){
     updateCash(data.points);
+    $("#count-down .timer").hide();
     if(data.bankrupt){
       alert("The other player was bankrupted");
     }else if(data.byPoints){
