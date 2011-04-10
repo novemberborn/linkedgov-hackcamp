@@ -17,7 +17,7 @@ socket.on("message", function(data){
 });
 
 $(function() {
-  resetGame();
+  //resetGame();
   $("#game-setup2").submit(handleRegistrationSubmit);
   $("#country-list li").click(sendMove);
   ready();
@@ -77,10 +77,11 @@ function updateCash(points){
 }
 
 function countdown(){
+  
   clearInterval(countdown.interval);
   var timer = $("#count-down .timer");
   var remaining = 10;
-  timer.text(10);
+  timer.text(remaining);
   countdown.interval = setInterval(function(){
     remaining--;
     if(remaining >= 0){
@@ -104,7 +105,7 @@ Commands["register-user"] = {
 Commands["move"] = {
   exec: function(data){
     updateCash(data.points);
-    countdown();
+    setTimeout(countdown, 4000);
     $("#current-item h2").text(data.commodity.title);
     $("#current-item p").text("£ " + data.commodity.points);
     $("#country-list li").each(function(ix, li){

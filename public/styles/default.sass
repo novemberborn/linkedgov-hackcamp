@@ -12,6 +12,49 @@ body
   width: 980px
   margin: 0 auto
 
+.info-tip 
+  position: absolute
+  right: -220px
+  top: -10px
+  z-index: 999
+  font-size: 0.9em
+  span
+    background: #d8fbff
+    border: 1px solid #b6d9dd
+    color: #597f83
+    padding: 8px 8px 8px 12px
+    //@extend .default
+    font-style: italic
+    position: relative
+    line-height: 130%
+  
+  &:before
+    left: -11px
+    border-width: 6px 12px 6px 0
+    border-color: transparent #b6d9dd
+    background-color: transparent
+    position: absolute
+    border-style: solid
+    content: ""
+    top: 3px
+    display: block
+    width: 0
+    z-index: 9999
+  &:after
+    left: -9px
+    border-width: 6px 12px 6px 0
+    border-color: transparent #D8FBFF
+    background-color: transparent
+    position: absolute
+    border-style: solid
+    content: ""
+    top: 3px
+    display: block
+    width: 0
+    z-index: 99999
+    
+
+  
 
 .default
   font-family: helvetica
@@ -78,6 +121,9 @@ h1
     margin-left: -1px
 
 .section
+  header
+    position: relative
+    
   margin-bottom: 50px
   background: #EBEBEB
   +rounded-corners(10px)
@@ -144,8 +190,9 @@ h1
   margin-right: 50px
   
 #count-down
-  width: 390px
-  float: left
+  width: 120px
+  float: right
+  
   .timer
     font-size: 3.8em
     text-align: center
@@ -162,4 +209,4 @@ h1
     
     font-size: 1.4em
   
-  
+ 

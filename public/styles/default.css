@@ -83,6 +83,45 @@ body {
   width: 980px;
   margin: 0 auto; }
 
+.info-tip {
+  position: absolute;
+  right: -220px;
+  top: -10px;
+  z-index: 999;
+  font-size: 0.9em; }
+  .info-tip span {
+    background: #d8fbff;
+    border: 1px solid #b6d9dd;
+    color: #597f83;
+    padding: 8px 8px 8px 12px;
+    font-style: italic;
+    position: relative;
+    line-height: 130%; }
+  .info-tip:before {
+    left: -11px;
+    border-width: 6px 12px 6px 0;
+    border-color: transparent #b6d9dd;
+    background-color: transparent;
+    position: absolute;
+    border-style: solid;
+    content: "";
+    top: 3px;
+    display: block;
+    width: 0;
+    z-index: 9999; }
+  .info-tip:after {
+    left: -9px;
+    border-width: 6px 12px 6px 0;
+    border-color: transparent #d8fbff;
+    background-color: transparent;
+    position: absolute;
+    border-style: solid;
+    content: "";
+    top: 3px;
+    display: block;
+    width: 0;
+    z-index: 99999; }
+
 .default, h1, #count-down .timer {
   font-family: helvetica;
   font-style: normal; }
@@ -154,6 +193,8 @@ h1 {
   -o-border-radius: 10px;
   border-radius: 10px;
   padding: 30px 10px 38px 35px; }
+  .section header, #game-setup2 header, #player-details header, #game-zone header {
+    position: relative; }
 
 #game-setup2 {
   padding: 30px 10px 38px 45px;
@@ -207,8 +248,8 @@ h1 {
   margin-right: 50px; }
 
 #count-down {
-  width: 390px;
-  float: left; }
+  width: 120px;
+  float: right; }
   #count-down .timer {
     font-size: 3.8em;
     text-align: center;
