@@ -60,11 +60,10 @@ function handleRegistrationSubmit(){
   if(this.username.value){
     register(this.username.value);
     $("#game-setup2").fadeOut("slow", function(){ // wait for fade to happen.. 
+      $("#banner").text("").css("margin", "0");
       ScrollToGame("#game-zone");
       loadGame();
     });
-    
-
   }
   return false;
 }
