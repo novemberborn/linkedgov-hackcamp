@@ -149,6 +149,7 @@ Commands["ftw"] = {
     }else if(data.tie){
       alert("You tied.");
     }else if(data.single){
+      $("#congrats p").text("You smuggled £" + data.points + "!");
       $("#congrats").show();
     }
     $("#player-details").fadeOut("slow");
