@@ -83,8 +83,10 @@ body {
   width: 980px;
   margin: 0 auto; }
 
-header {
-  line-height: 140%; }
+header h2 {
+  margin-bottom: 0; }
+header h2, header p {
+  line-height: 130%; }
 
 .info-tip {
   position: absolute;
@@ -187,7 +189,7 @@ h1 {
     padding: 35px 10px 20px 40px;
     margin-left: -1px; }
 
-.section, #game-setup2, #player-details, #game-zone {
+.section, #game-setup2, #player-details, #game-zone, #end-screen {
   margin-bottom: 50px;
   background: #ebebeb;
   -moz-border-radius: 10px;
@@ -195,7 +197,7 @@ h1 {
   -o-border-radius: 10px;
   border-radius: 10px;
   padding: 30px 10px 38px 35px; }
-  .section header, #game-setup2 header, #player-details header, #game-zone header {
+  .section header, #game-setup2 header, #player-details header, #game-zone header, #end-screen header {
     position: relative; }
 
 #game-setup2 {
@@ -228,9 +230,11 @@ h1 {
   position: relative;
   margin: 0 0 0 25px; }
   #game-zone header {
-    margin-bottom: 20px;
+    margin-bottom: 40px;
     overflow: hidden; }
 
+#country-list h2 {
+  margin-bottom: 10px; }
 #country-list ul {
   clear: both;
   margin-left: -20px; }
@@ -238,15 +242,13 @@ h1 {
 .country {
   width: 200px;
   background: white;
-  height: 250px;
   margin: 0 0 10px 10px;
   float: left;
   position: relative; }
   .country input {
-    position: absolute;
-    bottom: 10px;
-    left: 40px;
-    text-align: center; }
+    margin: 188px auto 0;
+    text-align: center;
+    width: 200px; }
 
 #current-item {
   float: left;
@@ -254,7 +256,7 @@ h1 {
   position: relative; }
   #current-item .info-tip {
     bottom: 20px;
-    width: 540px;
+    width: 560px;
     right: -570px; }
 
 #count-down {
@@ -274,7 +276,55 @@ h1 {
   top: auto;
   font-size: 1.4em; }
 
+#country-list li {
+  background-color: transparent;
+  background-position: center center;
+  background-repeat: no-repeat; }
 #country-list li[data-country="Ivory Coast"] {
-  background: red; }
+  background-image: url(/images/ivorycoast.png); }
+#country-list li[data-country="Myanmar"] {
+  background-image: url(/images/myanmar.png); }
 #country-list li[data-country="Iran"] {
-  background: red; }
+  background-image: url(/images/iran.png); }
+#country-list li[data-country="Somalia"] {
+  background-image: url(/images/somalia.png); }
+#country-list li[data-country="Egypt"] {
+  background-image: url(/images/egypt.png); }
+#country-list li[data-country="Guinea"] {
+  background-image: url(/images/guinea.png); }
+#country-list li[data-country="Libya"] {
+  background-image: url(/images/libya.png); }
+#country-list li[data-country="North Korea"] {
+  background-image: url(/images/northkorea.png); }
+#country-list li[data-country="Zimbabwe"] {
+  background-image: url(/images/zimbabwe.png); }
+#country-list li[data-country="Chile"] {
+  background-image: url(/images/chile.png); }
+#country-list li[data-country="Romania"] {
+  background-image: url(/images/romania.png); }
+#country-list li[data-country="Andorra"] {
+  background-image: url(/images/andorra.png); }
+#country-list li[data-country="Australia"] {
+  background-image: url(/images/australia.png); }
+#country-list li[data-country="Austria"] {
+  background-image: url(/images/austria.png); }
+#country-list li[data-country="Netherlands"] {
+  background-image: url(/images/netherlands.png); }
+
+#end-screen {
+  overflow: hidden;
+  float: left;
+  width: 940px; }
+  #end-screen #play-again {
+    margin: 20px 0 0 120px; }
+  #end-screen #congrats, #end-screen #play-again {
+    float: left; }
+  #end-screen div {
+    margin-bottom: 50px; }
+  #end-screen #info-graph {
+    clear: both; }
+    #end-screen #info-graph img {
+      border: 1px solid #dddddd;
+      margin: 30px auto 0;
+      width: 642px;
+      display: block; }

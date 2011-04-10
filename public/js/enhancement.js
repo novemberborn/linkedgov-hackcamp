@@ -46,7 +46,7 @@ function loadGame(){
   $("#player-details,#game-zone").fadeIn("slow",function(){
       if(proceeded){ return; }
       proceeded = true;
-      $("#country-list ul").delay(800).fadeIn("slow");  
+      $("#country-list ul").delay(2000).fadeIn("slow");  
       $("#about-money").delay(2200).fadeOut("slow",function(){
         $("#about-selling").fadeIn("slow",function(){
             $("#about-selling").delay(2800).fadeOut("slow");
