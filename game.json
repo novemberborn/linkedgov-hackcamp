@@ -4,11 +4,11 @@
   "commodities": [
     {
       "title": "Car",
-      "price": 1000
+      "points": 1000
     },
     {
       "title": "Grenade",
-      "price": 1500
+      "points": 1500
     }
   ],
   

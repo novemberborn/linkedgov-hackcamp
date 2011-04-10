@@ -27,16 +27,17 @@ function onClientMessage(client, data){
       }else{
         registeredUsers[client.sessionId] = registeredUsers[data.name] = {
           name: data.name,
-          client: client
+          client: client,
+          single: data.single
         };
-        client.send({ type: data.type, ok: true });
+        client.send({ type: data.type, ok: true, single: !!data.single });
         console.log("Registered user %s, %s", data.name, client.sessionId);
       }
       break;
     case "play":
       if(!data.single && !(data.name in registeredUsers)){
         client.send({ type: data.type, error: "unknown-competitor" });
-      }else if(!data.single && registeredUsers[data.name].game){
+      }else if(!data.single && (registeredUsers[data.name].game || registeredUsers[data.name].single)){
         client.send({ type: data.type, error: "competitor-playing" });
       }else{
         var us, them;
