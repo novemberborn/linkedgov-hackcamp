@@ -83,10 +83,12 @@ body {
   width: 980px;
   margin: 0 auto; }
 
+header {
+  line-height: 140%; }
+
 .info-tip {
   position: absolute;
-  right: -220px;
-  top: -10px;
+  right: -70px;
   z-index: 999;
   font-size: 0.9em; }
   .info-tip span {
@@ -215,7 +217,10 @@ h1 {
 
 #player-details {
   float: left;
-  width: 240px; }
+  width: 240px;
+  position: relative; }
+  #player-details .info-tip {
+    bottom: 40px; }
 
 #game-zone {
   float: left;
@@ -245,13 +250,19 @@ h1 {
 
 #current-item {
   float: left;
-  margin-right: 50px; }
+  margin-right: 50px;
+  position: relative; }
+  #current-item .info-tip {
+    bottom: 20px;
+    width: 540px;
+    right: -570px; }
 
 #count-down {
   width: 120px;
   float: right; }
   #count-down .timer {
-    font-size: 3.8em;
+    line-height: 100%;
+    font-size: 3.4em;
     text-align: center;
     font-weight: bold; }
 
@@ -262,3 +273,8 @@ h1 {
 .johanna-does-not-like-2-players #country-list button:active {
   top: auto;
   font-size: 1.4em; }
+
+#country-list li[data-country="Ivory Coast"] {
+  background: red; }
+#country-list li[data-country="Iran"] {
+  background: red; }

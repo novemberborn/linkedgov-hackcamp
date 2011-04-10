@@ -7,15 +7,15 @@ body
   font-family: georgia
   font-style: italic
   background: #333
-
-
   width: 980px
   margin: 0 auto
 
+header
+  line-height: 140%
+
 .info-tip 
   position: absolute
-  right: -220px
-  top: -10px
+  right: -70px
   z-index: 999
   font-size: 0.9em
   span
@@ -27,7 +27,6 @@ body
     font-style: italic
     position: relative
     line-height: 130%
-  
   &:before
     left: -11px
     border-width: 6px 12px 6px 0
@@ -120,14 +119,13 @@ h1
     padding: 35px 10px 20px 40px
     margin-left: -1px
 
-.section
-  header
-    position: relative
-    
+.section    
   margin-bottom: 50px
   background: #EBEBEB
   +rounded-corners(10px)
   padding: 30px 10px 38px 35px
+  header
+    position: relative
     
 #game-setup
   @extend .horizontal-list
@@ -157,7 +155,10 @@ h1
 #player-details
   float: left
   width: 240px
+  position: relative
   @extend .section
+  .info-tip
+    bottom: 40px
 #game-zone
   float: left
   @extend .section
@@ -188,13 +189,18 @@ h1
 #current-item
   float: left
   margin-right: 50px
-  
+  position: relative
+  .info-tip
+    bottom: 20px
+    width: 540px
+    right: -570px
 #count-down
   width: 120px
   float: right
   
   .timer
-    font-size: 3.8em
+    line-height: 100%
+    font-size: 3.4em
     text-align: center
     @extend .default
     font-weight: bold
@@ -209,4 +215,9 @@ h1
     
     font-size: 1.4em
   
- 
+#country-list
+  li[data-country="Ivory Coast"]
+    background: #ff0000
+  li[data-country="Iran"]
+    background: #ff0000
+

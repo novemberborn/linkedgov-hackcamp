@@ -17,9 +17,10 @@ socket.on("message", function(data){
 });
 
 $(function() {
-  //resetGame();
+  resetGame();
   $("#game-setup2").submit(handleRegistrationSubmit);
   $("#country-list li").click(sendMove);
+  $("#about-selling").hide(); 
   ready();
 });
 
@@ -43,8 +44,13 @@ function resetGame(){
 function loadGame(){  
   $("#player-details,#game-zone").fadeIn("slow",function(){
       $("#country-list ul").delay(800).fadeIn("slow");  
+      $("#about-money").delay(2200).fadeOut("slow",function(){
+        $("#about-selling").fadeIn("slow",function(){
+            $("#about-selling").delay(2800).fadeOut("slow");
+            console.log("Loading game...");
+        });
+      });
   });
-
 }
 
 
@@ -80,7 +86,7 @@ function countdown(){
   
   clearInterval(countdown.interval);
   var timer = $("#count-down .timer");
-  var remaining = 10;
+  var remaining = 20;
   timer.text(remaining);
   countdown.interval = setInterval(function(){
     remaining--;
@@ -105,7 +111,7 @@ Commands["register-user"] = {
 Commands["move"] = {
   exec: function(data){
     updateCash(data.points);
-    setTimeout(countdown, 4000);
+    setTimeout(countdown, 8000);
     $("#current-item h2").text(data.commodity.title);
     $("#current-item p").text("£ " + data.commodity.points);
     $("#country-list li").each(function(ix, li){
