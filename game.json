@@ -1,5 +1,5 @@
 {
-  "rounds": 1,
+  "rounds": 6,
   "initialPoints": 5000,
   "commodities": [
     {
@@ -294,8 +294,9 @@
           "risk": 0.2,
           "multiplier": 2
         }
-      },
-     {
+      }
+    },
+    {
       "title": "Dairy",
       "points": 400,
       "countries": {
