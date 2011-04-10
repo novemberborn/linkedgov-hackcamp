@@ -76,10 +76,10 @@ a:hover {
   border-bottom: dotted red 2px !important; }
 
 body {
-  padding: 40px;
+  padding: 0 40px 40px;
   font-family: georgia;
   font-style: italic;
-  background: #333333;
+  background: #d00000;
   width: 980px;
   margin: 0 auto; }
 
@@ -170,7 +170,8 @@ p, label, input {
 #banner {
   overflow: hidden;
   text-indent: -9999em;
-  background: transparent url() no-repeat center center;
+  background: transparent url(/images/logo.png) no-repeat center -4px;
+  height: 268px;
   margin-bottom: 30px;
   font-size: 2em;
   text-align: left;
@@ -289,6 +290,8 @@ h1 {
   background-image: url(/images/myanmar.png); }
 #country-list li[data-country="Iran"] {
   background-image: url(/images/iran.png); }
+#country-list li[data-country="Sudan"] {
+  background-image: url(/images/sudan.png); }
 #country-list li[data-country="Somalia"] {
   background-image: url(/images/somalia.png); }
 #country-list li[data-country="Egypt"] {

@@ -3,10 +3,10 @@
 @import components/helpers
 
 body
-  padding: 40px
+  padding: 0 40px 40px
   font-family: georgia
   font-style: italic
-  background: #333
+  background: #d00000
   width: 980px
   margin: 0 auto
 
@@ -48,7 +48,7 @@ header
     border-color: transparent #D8FBFF
     background-color: transparent
     position: absolute
-    border-style: solid
+    border-style: solid 
     content: ""
     top: 3px
     display: block
@@ -102,8 +102,8 @@ p,label, input
 #banner
   overflow: hidden
   text-indent: -9999em
-  background: transparent url() no-repeat center center
-  
+  background: transparent url(/images/logo.png) no-repeat center -4px
+  height: 268px
   margin-bottom: 30px
   font-size: 2.0em
   text-align: left
@@ -234,6 +234,9 @@ h1
     background-image: url(/images/myanmar.png)
   li[data-country="Iran"]
     background-image: url(/images/iran.png)
+  li[data-country="Sudan"]
+    background-image: url(/images/sudan.png)
+
   li[data-country="Somalia"]
     background-image: url(/images/somalia.png)
   li[data-country="Egypt"]

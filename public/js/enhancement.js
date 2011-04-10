@@ -38,7 +38,7 @@ function ScrollToGame(location){
 }
 
 function resetGame(){
-  $("#player-details,#game-zone,#country-list ul").hide();
+  $("#player-details,#game-zone,#country-list ul,#end-screen, #congrats, #bankrupt").hide();
 }
 
 function loadGame(){
